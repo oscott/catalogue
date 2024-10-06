@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: item
 title: "Do not expect consistency"
 id: 6
 format: "Vinyl"
