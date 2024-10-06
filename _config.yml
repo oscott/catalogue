@@ -1,5 +1,9 @@
 title: "Koept Catalogue"
 remote_theme: riggraz/no-style-please
+sass:
+  style: compressed
+include:
+  - assets/css/style.css
 description: "A listing of the original inept catalogue"
 baseurl: "/catalogue" # adjust to your repository name
 url: "https://oscott.github.io" # your GitHub Pages URL
