@@ -1,0 +1,17 @@
+title: "Koept Catalogue"
+theme: no-style-please
+description: "A listing of the original inept catalogue"
+baseurl: "/catalog" # adjust to your repository name
+url: "https://oscott.github.io" # your GitHub Pages URL
+permalink: /:title/
+
+# Optional, but handy for organizing posts:
+collections:
+  catalog:
+    output: true
+    permalink: /:title/
+
+# Exclude unnecessary files:
+exclude:
+  - Gemfile
+  - Gemfile.lock
