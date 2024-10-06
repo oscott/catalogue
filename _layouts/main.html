@@ -13,25 +13,26 @@ layout: default
 }
 
 .item {
-  width: 100px; /* Fixed width for each item */
-  height: 100px; /* Fixed height for each item */
+  width: 200px; /* Fixed width for each item */
+  height: 200px; /* Fixed height for each item */
   margin: 5px; /* Margin between items */
   border: 1px solid #ccc; /* Optional border for visibility */
   display: flex; /* Use flexbox for content alignment */
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center the content vertically */
-  overflow: hidden; /* Hide overflow text */
-  text-align: center; /* Center the text */
+/*   justify-content: center;
+  align-items: center; 
+  overflow: hidden; 
+  text-align: center; */
 }
 
 .item-content {
   font-size: 12px; /* Base font size */
   overflow: hidden; /* Hide any overflow text */
+    padding: 5px;
   text-overflow: ellipsis; /* Add ellipsis for overflow text */
-  white-space: nowrap; /* Prevent text from wrapping */
-  display: flex; /* Use flexbox to control the content */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+/*   white-space: nowrap; /* Prevent text from wrapping */
+  display: flex; /* Use flexbox to control the content  */
+/*   justify-content: center; /* 
+  align-items: center;  */
 }
 </style>
     {{ content }}
