@@ -26,10 +26,10 @@ a:hover {
   {% assign year = page.date | date: "%Y" %}
   {% assign month = page.date | date: "%b" %}
   {% assign day = page.date | date: "%d" %}
-  
-  {% assign truncated_year = year | slice: 1, 2 %}  <!-- Get last two digits of the year -->
 
-  <p><strong>Date:</strong> {{ truncated_year }}-{{ month }}-{{ day }}</p>
+  {% assign last_two_year = year | slice: -2, 2 %} <!-- This will take the last two digits -->
+
+  <p><strong>Date:</strong> {{ last_two_year }}-{{ month }}-{{ day }}</p>
 {% endif %}
 
 {% if page.price %}
