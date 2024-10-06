@@ -4,7 +4,7 @@ title: "Koept Catalogue"
 ---
 
 # The catalogue
-
+{% assign sorted_items = site.catalog | sort: 'date' | reverse %}
 <ul>
   {% for item in site.catalog %}
     <li>
