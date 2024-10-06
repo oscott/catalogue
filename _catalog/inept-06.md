@@ -10,3 +10,11 @@ date: 2002-01-01
 
 This is a brief description of inept-6. Containing images, links, and other content.
 Repeat this for all 20 items.
+
+{{ item.layout }}
+{{ item.title }}
+{{ item.id }}
+{{ item.format }}
+{{ item.externalUrl }}
+{{ item.artist }}
+{{ item.date }}
