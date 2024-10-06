@@ -24,7 +24,11 @@ a:hover {
 
 {% assign formatted_date = page.date | date: "%Y-%m-%d" %}
 {% if page.date %}
-<p><strong>Date:</strong> {{ formatted_date | slice: 1, 10 }}</p>
+  {% assign year = formatted_date | slice: 1, 2 %}
+  {% assign month = page.date | date: "%b" %}
+  {% assign day = formatted_date | slice: 8, 2 %}
+  
+  <p><strong>Date:</strong> {{ year }}-{{ month }}-{{ day }}</p>
 {% endif %}
 
 {% if page.price %}
