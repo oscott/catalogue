@@ -8,13 +8,11 @@ artist: "Various Artists"
 date: 2002-01-01
 ---
 
-This is a brief description of inept-6. Containing images, links, and other content.
-Repeat this for all 20 items.
+<h1>{{ page.title }}</h1>
+<p><strong>Artist:</strong> {{ page.artist }}</p>
+<p><strong>Format:</strong> {{ page.format }}</p>
+<p><strong>Date:</strong> {{ page.date }}</p>
+<a href="{{ page.externalUrl }}">External Link</a>
 
-{{ item.layout }}
-{{ item.title }}
-{{ item.id }}
-{{ item.format }}
-{{ item.externalUrl }}
-{{ item.artist }}
-{{ item.date }}
+<p>This is a brief description of inept-6. Containing images, links, and other content.
+Repeat this for all 20 items.</p>
