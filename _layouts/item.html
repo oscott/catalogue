@@ -22,13 +22,14 @@ a:hover {
 <p><strong>Format:</strong> {{ page.format }}</p>
 {% endif %}
 
-{% assign formatted_date = page.date | date: "%Y-%m-%d" %}
 {% if page.date %}
-  {% assign year = formatted_date | slice: 1, 2 %}
+  {% assign year = page.date | date: "%Y" %}
   {% assign month = page.date | date: "%b" %}
-  {% assign day = formatted_date | slice: 8, 2 %}
+  {% assign day = page.date | date: "%d" %}
   
-  <p><strong>Date:</strong> {{ year }}-{{ month }}-{{ day }}</p>
+  {% assign truncated_year = year | slice: 1, 2 %}  <!-- Get last two digits of the year -->
+
+  <p><strong>Date:</strong> {{ truncated_year }}-{{ month }}-{{ day }}</p>
 {% endif %}
 
 {% if page.price %}
