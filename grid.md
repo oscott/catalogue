@@ -33,9 +33,8 @@ title: Grid View
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
 }
-
-  
 </style>
+
 <h1>Grid View</h1>
 <ul class="item-grid">
   {% for item in site.catalog %}
