@@ -8,7 +8,7 @@ title: "Koept Catalogue"
 <ul>
   {% for item in site.catalog %}
     <li>
-      <a href="{{ item.url }}">{{ item.title }}</a> by {{ item.artist }} - {{ item.format }} 
+      <a href="catalogue/{{ item.url }}">{{ item.title }}</a> by {{ item.artist }} - {{ item.format }} 
       <br>
       <a href="{{ item.externalUrl }}">External Link</a>
     </li>
