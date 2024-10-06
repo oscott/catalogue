@@ -8,7 +8,6 @@ artist: "Various Artists"
 date: 2002-01-01
 ---
 
-<h1>{{ page.title }}</h1>
 <p><strong>Artist:</strong> {{ page.artist }}</p>
 <p><strong>Format:</strong> {{ page.format }}</p>
 <p><strong>Date:</strong> {{ page.date }}</p>
