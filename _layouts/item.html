@@ -3,14 +3,33 @@ layout: default
 ---
 
 <h1>{{ page.title }}</h1>
+
+{% if page.artist %}
 <p><strong>Artist:</strong> {{ page.artist }}</p>
+{% endif %}
+
+{% if page.format %}
 <p><strong>Format:</strong> {{ page.format }}</p>
+{% endif %}
+
+{% if page.date %}
 <p><strong>Date:</strong> {{ page.date }}</p>
+{% endif %}
+
+{% if page.price %}
 <p><strong>Price:</strong> {{ page.price }}</p>
+{% endif %}
+
+{% if page.edition %}
 <p><strong>Edition:</strong> {{ page.edition }}</p>
+{% endif %}
+
+{% if page.externalUrl %}
 <p><strong>External URL:</strong> <a href="{{ page.externalUrl }}">{{ page.externalUrl }}</a></p>
+{% endif %}
 
 <!-- Render additional content -->
 <div class="additional-content">
     {{ content }}
 </div>
+
