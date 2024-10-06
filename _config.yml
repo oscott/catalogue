@@ -1,7 +1,7 @@
 title: "Koept Catalogue"
 theme: no-style-please
 description: "A listing of the original inept catalogue"
-baseurl: "/catalog" # adjust to your repository name
+baseurl: "/catalogue" # adjust to your repository name
 url: "https://oscott.github.io" # your GitHub Pages URL
 permalink: /:title/
 
