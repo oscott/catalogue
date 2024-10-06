@@ -13,4 +13,4 @@ title: "Koept Catalogue"
   {% endfor %}
 </ul>
  
-<p class="hide"><a href="{{ '/grid.html' | relative_url }}">View Grid</a></p>
+<p class="hide"><a href="{{ '/grid.html' | relative_url }}">■ ■ ■ ■</a></p>
