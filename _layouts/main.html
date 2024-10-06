@@ -3,5 +3,35 @@ layout: default
 ---
 <style>
     .hide{  opacity: 0.5;}
+    .item-grid {
+  display: flex;
+  flex-wrap: wrap; /* Allows items to wrap to the next line */
+  max-width: 800px; /* Max width for the grid */
+  margin: 0 auto; /* Center the grid */
+  padding: 0;
+  list-style: none; /* Remove default list styling */
+}
+
+.item {
+  width: 100px; /* Fixed width for each item */
+  height: 100px; /* Fixed height for each item */
+  margin: 5px; /* Margin between items */
+  border: 1px solid #ccc; /* Optional border for visibility */
+  display: flex; /* Use flexbox for content alignment */
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+  overflow: hidden; /* Hide overflow text */
+  text-align: center; /* Center the text */
+}
+
+.item-content {
+  font-size: 12px; /* Base font size */
+  overflow: hidden; /* Hide any overflow text */
+  text-overflow: ellipsis; /* Add ellipsis for overflow text */
+  white-space: nowrap; /* Prevent text from wrapping */
+  display: flex; /* Use flexbox to control the content */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+}
 </style>
     {{ content }}
