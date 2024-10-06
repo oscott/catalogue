@@ -12,8 +12,9 @@ layout: default
 <p><strong>Format:</strong> {{ page.format }}</p>
 {% endif %}
 
+{% assign formatted_date = page.date | date: "%Y-%m-%d" %}
 {% if page.date %}
-<p><strong>Date:</strong> {{ page.date }}</p>
+<p><strong>Date:</strong> {{ formatted_date | slice: 1, 10 }}</p>
 {% endif %}
 
 {% if page.price %}
@@ -32,4 +33,3 @@ layout: default
 <div class="additional-content">
     {{ content }}
 </div>
-
