@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Item Grid
+title: Grid View
 ---
 <style>
 .item-grid {
@@ -36,9 +36,9 @@ title: Item Grid
 
   
 </style>
-<h1>Item Grid</h1>
+<h1>Grid View</h1>
 <ul class="item-grid">
-  {% for item in site.catalog %}
+  {% for item in site.catalogue %}
     <li class="item">
       <div class="item-content">
         <h3>{{ item.title }}</h3>
