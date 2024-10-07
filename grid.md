@@ -11,7 +11,8 @@ title: Grid View
         <h3 class="title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></h3>
         <p class="artist">{{ item.artist }}</p>
         <p class="format">{{ item.format }}</p>
-        <p class="dataz"><span class="catno">{{ item.catno }}</span><span class="date">.{{ item.date | date: "%Y" | slice: 1, 3 }}</span></p>
+        <p class="catno">{{ item.catno }}</p>
+        <p class="date">{{ item.date | date: "%Y" | slice: 1, 3 }}</p>
       </div>
     </li>
   {% endfor %}
