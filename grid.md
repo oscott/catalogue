@@ -23,8 +23,7 @@ title: Grid View
         <p class="artist">{{ item.artist }}</p>
         <p class="format">{{ item.format }}</p>
         <p class="catno">{{ item.catno }}.{{ item.date | date: "%Y" | slice: 1, 3 }}</p>
-<!--         <p class="date">{{ item.date | date: "%Y" | slice: 1, 3 }}</p>
-      </div> -->
+      </div>
     </li>
   {% endfor %}
 </ul>
