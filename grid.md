@@ -3,6 +3,7 @@ layout: main
 title: koept.catalogue
 ---
 <p><a href="{{ '/' | relative_url }}">..</a></p>
+<p>Start import items from koept.net</p>
 <h1>{{ page.title }}</h1>
 
 {% assign sorted_items = site.catalog | sort: 'date' | reverse %}
@@ -20,3 +21,4 @@ title: koept.catalogue
     </li>
   {% endfor %}
 </ul>
+<p>End import items from koept.net</p>
