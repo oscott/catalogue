@@ -1,12 +1,11 @@
 ---
 layout: post
 title: "Title"
-id: 1
-format: "Digital"
-externalUrl: "https://koept.net/01"
-artist: "Artist Name"
+id: 0
+format: "various"
+externalUrl: "https://os.koe.pt"
+artist: "various"
 date: 1999-01-01
 ---
 
-This is a brief description of inept-x. Containing images, links, and other content.
-Repeat this for all 20 items.
+There are more items being dusted off
