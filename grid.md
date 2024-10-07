@@ -5,7 +5,7 @@ title: koept.catalogue
 <p><a href="{{ '/' | relative_url }}">..</a></p>
 <h1>{{ page.title }}</h1>
 
-{% assign sorted_items = site.catalog | sort: 'id' | reverse %}
+{% assign sorted_items = site.catalog | sort: 'date' | reverse %}
 
 <ul class="item-grid">
   {% for item in sorted_items %}
