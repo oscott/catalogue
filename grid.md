@@ -2,6 +2,7 @@
 layout: main
 title: koept.catalogue
 ---
+<p><a href="{{ '/' | relative_url }}">..</a></p>
 <h1>{{ page.title }}</h1>
 {% assign sorted_items = site.catalog | sort: 'id' | reverse %}
 <ul class="item-grid">
@@ -17,5 +18,3 @@ title: koept.catalogue
     </li>
   {% endfor %}
 </ul>
-
-<p><a href="{{ '/' | relative_url }}">..</a></p>
