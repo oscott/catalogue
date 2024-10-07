@@ -22,9 +22,9 @@ title: Grid View
         <h3 class="title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></h3>
         <p class="artist">{{ item.artist }}</p>
         <p class="format">{{ item.format }}</p>
-        <p class="catno">{{ item.catno }}</p>
-        <p class="date">{{ item.date | date: "%Y" | slice: 1, 3 }}</p>
-      </div>
+        <p class="catno">{{ item.catno }}.{{ item.date | date: "%Y" | slice: 1, 3 }}</p>
+<!--         <p class="date">{{ item.date | date: "%Y" | slice: 1, 3 }}</p>
+      </div> -->
     </li>
   {% endfor %}
 </ul>
