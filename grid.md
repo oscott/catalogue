@@ -22,11 +22,7 @@ title: Grid View
         <h3 class="title"><a href="{{ site.baseurl }}{{ item.url }}">{{ item.title }}</a></h3>
         <p class="artist">{{ item.artist }}</p>
         <p class="format">{{ item.format }}</p>
-        
-          {% assign year = page.date | date: "%Y" %}       <!-- Get the full year -->
-          {% assign last_three_year = year | slice: 1, 3 %} <!-- Get the last three digits of the year -->
-
-        <p class="date">{{ last_three_year }}</p>
+        <p class="date">{{ item.date }}</p>
       </div>
     </li>
   {% endfor %}
