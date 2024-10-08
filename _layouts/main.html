@@ -61,3 +61,20 @@ layout: default
 } 
 </style>
     {{ content }}
+<script>
+        // Function to update the hue of each link
+    function updateLinkColors() {
+        const links = document.querySelectorAll('a'); // Select all links
+        links.forEach(link => {
+            const hue = Math.floor(Math.random() * 360); // Random hue (0-360) for each link
+            link.style.transition = 'color 4s'; // Fade effect duration
+            link.style.color = `hsl(${hue}, 30%, 50%)`; // Set the color with the random hue
+        });
+    }
+
+    // Update colors every second
+    setInterval(updateLinkColors, 1000);
+
+    // Run once on page load
+    updateLinkColors();
+</script>
