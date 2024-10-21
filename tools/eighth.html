@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Find the Closest Wiccan Date</title>
+    </head>
+    <body>
+        <h1>Find the Closest Wiccan Date</h1>
+
+        <label for="date-input">Date: </label>
+        <input type="date" id="date-input" />
+        <button onclick="findClosestDate()">Find Closest Date</button>
+
+        <p id="result"></p>
+        <p id="year-result"></p>
+
+        <script>
+            // Function to set today's date as default
+            window.onload = function () {
+                const today = new Date();
+                const formattedDate = today.toISOString().substring(0, 10); // Format YYYY-MM-DD
+                document.getElementById("date-input").value = formattedDate;
+            };
+
+            // Function to get fixed Wiccan dates
+            function getWiccanDates(year) {
+                return [
+                    {
+                        name: "Yule (Winter Solstice)",
+                        code: "Y",
+                        date: new Date(year, 11, 21),
+                    }, // Dec 21
+                    { name: "Imbolc", code: "I", date: new Date(year, 1, 2) }, // Feb 2
+                    {
+                        name: "Ostara (Spring Equinox)",
+                        code: "O",
+                        date: new Date(year, 2, 20),
+                    }, // Mar 20
+                    { name: "Beltane", code: "B", date: new Date(year, 4, 1) }, // May 1
+                    {
+                        name: "Litha (Summer Solstice)",
+                        code: "L",
+                        date: new Date(year, 5, 21),
+                    }, // Jun 21
+                    {
+                        name: "Lammas (Lughnasadh)",
+                        code: "R",
+                        date: new Date(year, 7, 1),
+                    }, // Aug 1
+                    {
+                        name: "Mabon (Autumn Equinox)",
+                        code: "M",
+                        date: new Date(year, 8, 22),
+                    }, // Sep 22
+                    { name: "Samhain", code: "S", date: new Date(year, 9, 31) }, // Oct 31
+                ];
+            }
+
+            // Function to find the closest Wiccan date
+            function findClosestDate() {
+                const inputDate = new Date(
+                    document.getElementById("date-input").value,
+                );
+                if (isNaN(inputDate)) {
+                    document.getElementById("result").innerText =
+                        "Please enter a valid date.";
+                    return;
+                }
+
+                const wiccanDates = getWiccanDates(inputDate.getFullYear());
+                let closestDate = wiccanDates[0];
+                let minDiff = Math.abs(inputDate - wiccanDates[0].date);
+
+                for (let i = 1; i < wiccanDates.length; i++) {
+                    const diff = Math.abs(inputDate - wiccanDates[i].date);
+                    if (diff < minDiff) {
+                        closestDate = wiccanDates[i];
+                        minDiff = diff;
+                    }
+                }
+
+                // Output the closest Wiccan date
+                document.getElementById("result").innerText =
+                    `The closest Wiccan date is: ${closestDate.name} on ${closestDate.date.toDateString()}`;
+
+                // Extract and truncate the year
+                const year = inputDate.getFullYear().toString();
+                const truncatedYear = year.substring(1); // Remove the first digit
+                document.getElementById("year-result").innerText =
+                    `${truncatedYear}${closestDate.code}`;
+            }
+        </script>
+    </body>
+</html>
